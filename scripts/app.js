@@ -1,17 +1,13 @@
-
-'use strict';    
-/*angular.module('myapp', []);*/
-
-var test= angular.module('myapp', ['ngRoute']);
+var test= angular.module('myapp', ['ngroute']);
          
         test.config(function($routeProvider) {
         $routeProvider
-            // route for the home page
+            // route for the contactus page
             .when('/home', {
                 templateUrl : 'home.html',
                 controller  : 'BlogController'
             })
-            // route for the myblog page
+            // route for the menu page
             .when('/myblog', {
                 templateUrl : 'myblog.html',
                 controller  : 'BlogController'
@@ -20,5 +16,3 @@ var test= angular.module('myapp', ['ngRoute']);
             
             .otherwise('/home');
     });
-         
-        

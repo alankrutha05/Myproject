@@ -1,0 +1,35 @@
+
+          
+
+<div class="tab-content" ng-controller="BlogController">
+<!-- Content for tab 1- Home -->
+	  <div id="home" class="tab-pane fade in active" >
+	       <div class="col-xs-12">
+          <div class="span6 pull-right form-group" style="text-align:right">
+              <!-- Used angualr filters to sort by name -->
+              Sort by(A-Z/Z-A): <a ng-click="ascSort()"><span class="glyphicon glyphicon-arrow-up" ></span> </a>
+              <a ng-click="remSort()"><span class="glyphicon glyphicon-remove" ></span> </a>
+          </div> 
+               
+<!-- Used Angular ng-repeat directive to loop through the blog list -->
+            <div  ng-repeat="blogl in blogList.blogs | orderBy: sortValue">
+                <div class="media-left media-middle">
+                    <a href="#">
+                    <img class="media-object img-thumbnail"
+                         ng-src={{blogl.image}} alt="blog">
+                     </a>
+                </div>
+				<div class="media-body">
+                     <h4 class="media-heading">{{blogl.title}} </h4>
+				     <span class="badge">{{blogl.name}}</span>
+                      <p>{{blogl.Description}}</p>
+                      <br>
+                </div>
+            </div>
+          </div>
+     </div>
+    
+</div>
+
+    
+
