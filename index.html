@@ -1,0 +1,52 @@
+<!Doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0"/>
+<html ng-app = "myapp">
+   
+   <head>
+    <title>Blogs at TechAspect </title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+   </head>
+   
+ <body>
+          
+<div class="container-fluid">
+    <div class="row row-content">
+    <div class="col-xs-12">
+	  <header>
+		<h2>Blogs @<img src = "\images\ta.jpg" height="80px"></h2> 
+      </header>
+        
+<!-- Nav bar tabs -->		
+	  <ul class="nav nav-tabs">
+		<li class= "active" ><a data-toggle="tab" href="home">Home</a></li>
+		<li><a data-toggle="tab" href="myblog">My blog</a><li>
+      </ul>
+        
+
+       
+  <ng-view></ng-view>
+        </div>
+    </div>
+</div>
+
+     
+<footer class="row-footer text-center"> 
+    <p>@Copyright 2016 ALankrutha Ambarkar </p>
+</footer>
+
+
+
+      <script src="bower_components/angular/angular.min.js"></script>
+	  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+	  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="scripts/blogCtrl.js"></script>
+      <script src="scripts/controllers.js"></script>
+     <script src="scripts/services.js"></script>
+     <script src="bower_components/angular-route/angular-route.min.js"></script>
+     <!-- <script src="/scripts/app.js"></script>-->
+      
+   </body>
+</html>
